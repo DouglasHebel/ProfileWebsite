@@ -31,6 +31,14 @@ ul {
   }
   #photo {
     border-radius: 15px 50px;
-    width: 70%;
-    height: 70%; 
+    width: 50%;
+    height: 50%;
   } 
+
+  #homefont {
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  #welcomefont {
+    font-family: 'Oranienbaum', serif;
+  }
