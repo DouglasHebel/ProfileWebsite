@@ -19,34 +19,145 @@
             <!--
             <li><a class="item" href="#AboutMe">About Me</a></li>
             <li><a class="item" href="#WorkExperience">Work Experience</a></li>
-            <li><a class="item" href="#Projects">Projects</a></li>
+            <li><a class="item" href="#Project">Projects</a></li>
             -->
+            
           </ul> 
-
-
-          <div class="container col-xxl-8 px-4 py-5">
+          <div class="container col-xxl-8 px-4 py-5" height="100%" width="100%" position:fixed>
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
               <div class="col-10 col-sm-8 col-lg-6">
-                <img src="IMG_7591.png" class="d-block mx-lg-auto img-fluid" id="photo" loading="lazy">
+                <img src="profImage.png" class="d-block mx-lg-auto img-fluid" id="photo" loading="lazy">
               </div>
               <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3" id="welcomefont">Welcome!</h1>
-                <p class="lead" id="welcomefont">My name is Douglas Hebel. Thank you for visiting this website. Below are links to my current resume and GitHub account.</p>
+                <h1 class="display-5 fw-bold lh-1 mb-3">Welcome!</h1>
+                <p class="lead" id="welcomefont">My name is Douglas Hebel. Thank you for visiting this website! Below is a link to my current resume and some fun projects I have done.</p>
                   <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     <a href="Douglas Hebel Resume.pdf" target="_blank">
-                      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Resume</button>
+                      <button type="button" class="btn btn-light btn-lg px-4">Resume</button>
                     </a>
-                    <a href="https://github.com/DouglasHebel" target="_blank">
-                      <button type="button" class="btn btn-outline-secondary btn-lg px-4">GitHub</button>
+                    <a href="#Project">
+                      <button type="button" class="btn btn-light btn-lg px-4">Projects</button>
                     </a>
                 </div>
               </div>
             </div>
           </div>
 
+          <div id="Project" class="container center">
+          <hr class="featurette-divider">
+          <div class="row">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Python News Article Categorizer</h2>
+              <p class="lead">Automated and adaptive python research project that implements multiple text classification methods, such as: Naive Bayes, Logistic Regression and Linear Support Vector. <br><br>The dataset consists of 200,000+ labeled records which contains a title, headline of the article, and a short description. With the input being the article's title and short description, our model would provide
+                <span id="dots">...</span><span id="more"> the category to which the article belonged to e.g. "Business", "World News", "Sports"... ect. Over the course of three iterations of our model, we obtained an accuracy of ~75% success rate in categorizing. 
+                <br><br><u>First Iteration </u><br>Implementation of Naive Bayes. Removed puncuation and stopwords such as "the", "at", "is". Accuracy at this time was 55% success rate. 
+                <br><br> <u>Second Iteration </u><br> Implementation of Naive Bayes, Logistic Regression, and Linear Support Vector Classification using Scikit-Learn library. Additionally, test unigrams, bigrams, and trigrams and found unigrams are definative.  
+                <br><br> <u>Third Iteration </u><br> Implementation of Lematization and a new alpha value for Naive Bayes. We found that the article headline contains the highest degree of keywords so we doubled the value the words in the headline. With these changes, our final success rate is 75%. <br><br> <u>Important Links</u><br> Dataset: <a href="https://www.kaggle.com/datasets/rmisra/news-category-dataset"> www.kaggle.com</a> <br> Articles used for research: <a href="https://ieeexplore.ieee.org/document/5477131">https://ieeexplore.ieee.org/document/5477131</a>  <a href="https://ieeexplore.ieee.org/document/5277330">https://ieeexplore.ieee.org/document/5277330</a> 
+                <br><br><u>Acknowledgments</u><br> This project was done in collaboration with Matthew Ibrahim and his tremendous attributions.</span></p>
+              <button onclick="newsButton()" id="newsBtn">Read More</button>
+            </div>
+            <div class="col-md-5">
+              <img src="newsImage.png" id="newsImage" loading="lazy">
+            </div>
+
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1"> Online Inventory Tracking Application</h2>
+              <p class="lead">Full stack web/mobile application for users to track grocery inventory, share inventory, search recipes with items in inventory, use phone camera to scan receipts to add items in inventory, which is stored in an online database.
+                With the user's interaction with the application as a design focual point, the application is easily navigable with minimal effort.</p>
+              <p class ="lead"> The application acts as a "virtual refrigerator", where items can be added to the refrigerator via an image of a reciept or manually by user. These refrigerators and their items can be shared 
+              <span id="dot">...</span><span id="add">with other users. Information about the items are displayed and can be organized by perishable date, calories, date added, or name. Possible recipes can be suggested based off items available. 
+              <br><br> As a team, which consisted of Project Lead, Front-End, Back-End, Scrum and GitHub masters, we approached this project with agile software developement methodology. My role as Front-End lead entailed designing the applications interface centered on the user. The process of creating wireframes, mockups, high level storyboards and user stories provided opportunities for feedback in the design phase. HTML, CSS, Bootstrap, and JavaScript was used for front-end Development.
+              <br><br><u>Stack List</u><br> Djang, Python, Docker, MySQL, Cloud Vision API, HTML, CSS, Bootstrap, JavaScript
+              <br><br><u>Acknowledgments</u><br> Joshua Lizak, Nina Mir, Abhishek Mane, Wilson Xe, Gangzaorige Li 
+              <br><br><u><a href="FridgeAppReport.pdf" target="_blank">Example of Mile Stone, Wire Frames, and User Stories</a></u><br>
+              </span></p>
+              </p>
+              <button onclick="fridgeButton()" id="fridgeBtn">Read More</button>       
+              </div>
+            <div class="col-md-5 order-md-1">
+              <img src="FridgeAppPic.PNG" class="d-block mx-lg-auto img-fluid" id="fridgeImage" loading="lazy">
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Park Rescue Project</h2>
+              <p class="lead">User Interface and User Experience Front-End project designed for mobile devices. Users have the ability to track street parking regulations and restrictions, as well as, identify locations with available parking around San Franscisco State University.
+                The goal of this project was to gain experience with the front-end developement process. 
+                <span id="ellip">...</span><span id="show"><br><br>The project idea was aimed to solve a problem most students at SFSU have to endure. High-level use cases and personas, and story boards were used to create a prototype. This prototype was used in a real time focus group whose interaction with the application was analyzed for user experience testing.
+                Feedback from the focus group was used to revise the applications design. One main challenge was to design the application with the user's need for simplistic and quick navigation due to its nature of a mobile app that will be used on the go.
+                <br><br><u>Acknowledgments</u><br> Andrew Sarmiento, Amna Khan, Ryan Stillwagon
+                <br><br><u><a href="ParkingAppReport.pdf" target="_blank">Technical Report and Focus Group Analysis</a></u><br>
+              </span></p>
+              <button onclick="parkButton()" id="parkBtn">Read More</button>
+              <br><br>
+            </div>
+            <div class="col-md-5">
+              <img src="parkImage.png" class="d-block mx-lg-auto img-fluid" id="parkImage" loading="lazy">
+              <br><br>
+            </div>
+          </div>
+        </div>
+
 
           
-        <script src="" async defer></script>
+        <script>
+          function newsButton() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("newsBtn");
+          
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "Read More"; 
+              moreText.style.display = "none";
+            } 
+            else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Show Less"; 
+              moreText.style.display = "inline";
+            }
+          }
+          function fridgeButton() {
+            var dot = document.getElementById("dot");
+            var more = document.getElementById("add");
+            var btn = document.getElementById("fridgeBtn");
+          
+            if (dot.style.display === "none") {
+              dot.style.display = "inline";
+              btn.innerHTML = "Read More"; 
+              more.style.display = "none";
+            } 
+            else {
+              dot.style.display = "none";
+              btn.innerHTML = "Show Less"; 
+              more.style.display = "inline";
+            }
+          }
+          function parkButton() {
+            var d = document.getElementById("ellip");
+            var m = document.getElementById("show");
+            var b = document.getElementById("parkBtn");
+          
+            if (d.style.display === "none") {
+              d.style.display = "inline";
+              b.innerHTML = "Read More"; 
+              m.style.display = "none";
+            } 
+            else {
+              d.style.display = "none";
+              b.innerHTML = "Show Less"; 
+              m.style.display = "inline";
+            }
+          }
+          </script>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
