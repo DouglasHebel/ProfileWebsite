@@ -29,8 +29,10 @@
                 <img src="profImage.png" class="d-block mx-lg-auto img-fluid" id="photo" loading="lazy">
               </div>
               <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Welcome!</h1>
-                <p class="lead" id="welcomefont">My name is Douglas Hebel. Thank you for visiting this website! Below is a link to my current resume and some fun projects I have done.</p>
+                <h1 class="display-10 fw-bold lh-1 mb-3">Welcome and Happy <span id="date"></span>!</h1>
+                <p class="lead welcomefont">My name is Douglas Hebel. Thank you for visiting this website! Here's the quote of the day:</p>
+                <p class="quotefont">"<span id="quote"></span>" - <span id="author"></span> </p>
+                <p class="lead welcomefont">Below is a link to my current resume and some fun projects I have done.</p> 
                   <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     <a href="Douglas Hebel Resume.pdf" target="_blank">
                       <button type="button" class="btn btn-light btn-lg px-4">Resume</button>
@@ -157,6 +159,53 @@
               m.style.display = "inline";
             }
           }
+
+          (function() {
+              var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+              Date.prototype.getDayName = function() {
+                  return days[ this.getDay() ];
+              };
+          })();
+
+
+          let n =  new Date();
+          let day = n.getDayName();
+          document.getElementById("date").innerHTML = day;
+
+          let quote;
+          let auth;
+          let quoteArr = ["Life is now. There was never a time when your life was not now, nor will there ever be.", "The mind can go in a thousand directions, but on this beautiful path, I walk in peace. With each step, the wind blows. With each step, a flower blooms.", "We are sun and moon, dear friend; we are sea and land. It is not our purpose to become each other; it is to recognize each other, to learn to see the other and honor him for what he is: each the other's opposite and complement.", "Be your own artist, and always be confident in what you’re doing. If you’re not going to be confident, you might as well not be doing it.", "Dwell on the beauty of life. Watch the stars, and see yourself running with them. Think constantly on the changes of the elements into each other, for such thoughts wash away the dust of earthly life.", "There is no easy way. There is only hard work, late nights, early mornings, practice, rehearsal, repetition, study, sweat, blood, toil, frustration, and discipline.", "If you want others to be happy, practice compassion. If you want to be happy, practice compassion."];
+          let quoteAuth = ["Eckhart Tolle", "Thay Thich Nhat Hanh", "Hermann Hess", "Aretha Franklin", "Marcus Aurelius", "Jocko Willink", "Dali Lama"]
+          if(day == 'Monday'){
+            quote = quoteArr[0];
+            auth = quoteAuth[0];
+          }
+          if(day == 'Tuesday'){
+            quote = quoteArr[1];
+            auth = quoteAuth[1];
+          }
+          if(day == 'Wednesday'){
+            quote = quoteArr[2];
+            auth = quoteAuth[2];
+          }
+          if(day == 'Thursday'){
+            quote = quoteArr[3];
+            auth = quoteAuth[3];
+          }
+          if(day == 'Friday'){
+            quote = quoteArr[4];
+            auth = quoteAuth[4];
+          }
+          if(day == "Saturday"){
+            quote = quoteArr[5];
+            auth = quoteAuth[5];
+          }
+          if(day == "Sunday"){
+            quote = quoteArr[6];
+            auth = quoteAuth[6];
+          }
+          document.getElementById("quote").innerHTML = quote;
+          document.getElementById("author").innerHTML = auth;
           </script>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

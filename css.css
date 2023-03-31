@@ -81,8 +81,13 @@ ul {
   #homefont {
     font-family: 'Source Code Pro', monospace;
   }
+  .quotefont {
+    font-size: small;
+    margin-left: 5%;
+    margin-right: 20%;
+  }
 
-  #welcomefont {
+  .welcomefont {
     font-family: 'Oranienbaum', serif;
   }
   .featurette-divider {
